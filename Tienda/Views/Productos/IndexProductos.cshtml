@@ -1,0 +1,87 @@
+﻿
+@model IEnumerable<Tienda.Models.Productos>
+
+@{
+    ViewBag.Title = "IndexProductos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2 style="color: white; text-align:center">Nuestros productos</h2>
+
+<!--
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="pagos">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
+
+    -->
+
+<hr />
+<br />
+<center>
+    <div class="row contenedor">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6 col-md-4" style="margin-top:10px;">
+                <div style="background-color: whitesmoke; border-radius: 1%; text-align: center;" class="thumbnail">
+                    <h3>@Html.DisplayFor(modelItem => item.Nombre)</h3>
+
+
+                    <img style="width: 300px; height:300px; border-radius:20%" src="data:image/png;jpg;base64,@Html.DisplayFor(modelItem => item.Imagen)">
+
+                    <div>@Html.DisplayFor(modelItem => item.Precio)</div>
+
+
+
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+
+                </div>
+            </div>
+
+        }
+    </div>
+</center>

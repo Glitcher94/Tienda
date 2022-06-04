@@ -1,0 +1,220 @@
+﻿@model Tienda.Models.Empleado
+
+@{
+    Layout = "~/Views/Shared/_LayoutLoginAdministrador.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<center>
+    <div class="container" style="background-color: whitesmoke; color: darkolivegreen; width:60%;  border-radius : 1%">
+
+
+
+        <h2 class="text-center">Registro Empleado</h2>
+        <br>
+
+        <form id="basic-form" action="@Url.Action("RegistrarEmpleado","Administrador")" method="post">
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label style="text-align:center" (required)>Rut:</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-addon">
+                            <img src="~/Content/img/rut.png" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="number" name="Rut" class="form-control input_user" placeholder="Sin puntos ni dv, Ej: 18948394 " required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label style="text-align:center">Digito Verificador:</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-addon">
+                            <img src="~/Content/img/digito.jpg" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="text" name="DigitoVerificador" class="form-control input_user" value="" placeholder="Ejemplo: k / Ejemplo: 4" required>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label style="text-align:center">Correo Electrónico:</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-addon">
+                            <img src="~/Content/img/correo.jpg" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="email" name="Correo" class="form-control input_user" value="" placeholder="Correo" required>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label style="text-align:center">Nombre de usuario (nickname):</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-addon">
+                            <img src="~/Content/img/nombreUsuario.jpg" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="text" name="Nombre_usuario" class="form-control input_user" value="" placeholder="Nombre de usuario" required>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label style="text-align:center">Nombre y Apellido:</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-addon">
+                            <img src="~/Content/img/Nombre.png" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="text" name="Nombre" class="form-control input_user" value="" placeholder="Miguel Montecinos" required>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label style="text-align:center">Fecha de Nacimiento:</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-addon">
+                            <img src="~/Content/img/fecha.png" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="text" name="Fecha_nacimiento" class="form-control input_user" value="" placeholder="12/04/1990" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label style="text-align:center">Dirección:</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-addon">
+                            <img src="~/Content/img/Direccion.png" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="text" name="Direccion" class="form-control input_user" value="" placeholder="Las papas 435, Santiago" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label style="text-align:center">Estado Civil:</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-addon">
+                            <img src="~/Content/img/Estado.jpg" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="text" name="Estado_civil" class="form-control input_user" value="" placeholder="Soltero" required>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-row">
+                <div class="col-lg-12 -mb3">
+                    <label style="text-align:center">Contraseña:</label>
+
+                    <div class="input-group" style="display:flex; justify-content:center">
+
+                        <span class="input-group-addon ">
+                            <img src="~/Content/img/contrasena.png" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="password" name="Contrasena" class="form-control input_user" value="" placeholder="Contraseña" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label style="text-align:center">Confirmar Contraseña:</label>
+
+                    <div class="input-group " style="display:flex; justify-content:center">
+
+                        <span class="input-group-addon ">
+                            <img src="~/Content/img/contrasena.png" style="width: 20px; height: 20px" alt="Alternate Text" />
+                        </span>
+                        <input type="password" name="ConfirmarContrasena" class="form-control input_pass" value="" placeholder="Confirmar Contraseña" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    @if (ViewData["Mensaje"] != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewData["Mensaje"]
+
+                        </div>
+
+
+
+                    }
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <button type="submit" name="button" class="btn btn-primary">
+
+                        Registrarse
+                    </button>
+                </div>
+            </div>
+        </form>
+
+
+
+
+
+    </div>
+
+
+
+</center>
+
+<script>
+    $(document).ready(function () {
+        $("#basic-form").validate();
+    });</script>
+
+
+
